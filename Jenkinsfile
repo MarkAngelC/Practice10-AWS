@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         AWS_REGION = 'us-east-2'          
-        S3_BUCKET  = 'mmark-react-app-aws'  
+        S3_BUCKET  = 'mark-react-app-aws'  
     }
 
     stages {
