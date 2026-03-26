@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        AWS_REGION = 'us-east-2'          // change to your region
-        S3_BUCKET  = 'mark-castro-aws'  // change to your bucket name
+        AWS_REGION = 'us-east-2'          
+        S3_BUCKET  = 'mark-castro-aws'  
     }
 
     stages {
@@ -57,7 +57,7 @@ pipeline {
             }
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'aws-s3-credentials',
+                    credentialsId: 'mark-castro-aws',
                     usernameVariable: 'AWS_ACCESS_KEY_ID',
                     passwordVariable: 'AWS_SECRET_ACCESS_KEY'
                 )]) {
